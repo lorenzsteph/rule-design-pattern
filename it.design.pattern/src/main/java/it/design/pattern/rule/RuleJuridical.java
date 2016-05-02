@@ -1,5 +1,9 @@
 package it.design.pattern.rule;
 
-public interface RuleJuridical {
+import it.design.pattern.rule.model.Customer;
 
+public interface RuleJuridical {
+	
+	public String executeRule(Customer customer);
+	
 }
