@@ -68,6 +68,8 @@ public class ChainOfResponsibilityTests {
 
 		Assert.assertEquals("RuleBusinessName", ruleJuridical.get(0).getClass().getSimpleName());
 		Assert.assertEquals("RuleVatNumber", ruleJuridical.get(1).getClass().getSimpleName());
+
+		Assert.assertEquals("RuleFiscalCode", ruleList.get(4).getClass().getSimpleName());
 	}
 
 	@Test
@@ -75,8 +77,7 @@ public class ChainOfResponsibilityTests {
 		Customer customer = initCustomer(TypeCustomer.JURIDICAL);
 
 		chainOfResponsibilityService.printJuridicalInfo(customer);
-		Assert.assertTrue(
-				systemOutRule.getLog().contains("JuridicalInfo : ---> Business Name Value---> Vat Number Value"));
+		Assert.assertTrue(systemOutRule.getLog().contains("JuridicalInfo : ---> Business Name Value---> Vat Number Value"));
 	}
 
 	@Test
@@ -84,8 +85,7 @@ public class ChainOfResponsibilityTests {
 		Customer customer = initCustomer(TypeCustomer.PHYSICAL);
 
 		chainOfResponsibilityService.printPhysicalInfo(customer);
-		Assert.assertTrue(systemOutRule.getLog()
-				.contains("PhysicalInfo : ---> Name Value---> Surname Value---> FiscalCode Value"));
+		Assert.assertTrue(systemOutRule.getLog().contains("PhysicalInfo : ---> Name Value---> Surname Value---> FiscalCode Value"));
 	}
 
 	private Customer initCustomer(TypeCustomer typeCustomer) {
@@ -100,5 +100,5 @@ public class ChainOfResponsibilityTests {
 		customer.setTypeCustomer(typeCustomer);
 		return customer;
 	}
-	
+
 }

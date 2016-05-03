@@ -52,4 +52,10 @@ public class ChainOfResponsibilityService {
 		log.info(customerInfo);
 	}
 
+	public void printInfo(Customer customer) {
+		String customerInfo = "CustomerInfo : ";
+
+		log.info(customerInfo);
+	}
+
 }
