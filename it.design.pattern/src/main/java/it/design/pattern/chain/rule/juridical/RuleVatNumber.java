@@ -1,13 +1,13 @@
-package it.design.pattern.rule.juridical;
+package it.design.pattern.chain.rule.juridical;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
-import it.design.pattern.rule.RulePattern;
-import it.design.pattern.rule.RuleJuridical;
-import it.design.pattern.rule.model.Customer;
+import it.design.pattern.chain.rule.RuleJuridical;
+import it.design.pattern.chain.rule.RulePattern;
+import it.design.pattern.chain.rule.model.Customer;
 
 @Service
 @Order(2)

@@ -1,6 +1,6 @@
-package it.design.pattern.rule;
+package it.design.pattern.chain.rule;
 
-import it.design.pattern.rule.model.Customer;
+import it.design.pattern.chain.rule.model.Customer;
 
 public interface RuleJuridical {
 	

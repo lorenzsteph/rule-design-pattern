@@ -14,14 +14,15 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
-import it.design.pattern.rule.RuleJuridical;
-import it.design.pattern.rule.RulePattern;
-import it.design.pattern.rule.RulePhysical;
-import it.design.pattern.rule.model.Customer;
-import it.design.pattern.rule.model.TypeCustomer;
+import it.design.pattern.chain.PrinterService;
+import it.design.pattern.chain.rule.RuleJuridical;
+import it.design.pattern.chain.rule.RulePattern;
+import it.design.pattern.chain.rule.RulePhysical;
+import it.design.pattern.chain.rule.model.Customer;
+import it.design.pattern.chain.rule.model.TypeCustomer;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = AppConfig.class, loader = AnnotationConfigContextLoader.class)
+@ContextConfiguration(classes = AppConfigFactoryChain.class, loader = AnnotationConfigContextLoader.class)
 public class ChainOfResponsibilityTests {
 
 	private static final Logger log = LoggerFactory.getLogger(ChainOfResponsibilityTests.class);
@@ -39,7 +40,7 @@ public class ChainOfResponsibilityTests {
 	private List<RulePattern> ruleList;
 
 	@Autowired
-	private ChainOfResponsibilityService chainOfResponsibilityService;
+	private PrinterService chainOfResponsibilityService;
 
 	@Test
 	public void testRulePhysicalContext() {
