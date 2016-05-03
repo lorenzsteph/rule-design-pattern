@@ -1,4 +1,4 @@
-package it.design.pattern.rule.model;
+package it.design.pattern.chain.rule.model;
 
 public class Customer {
 

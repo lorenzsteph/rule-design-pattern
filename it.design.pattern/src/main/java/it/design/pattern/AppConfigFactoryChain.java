@@ -8,29 +8,30 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-import it.design.pattern.factory.JsonParser;
-import it.design.pattern.factory.ParserFactory;
-import it.design.pattern.factory.XmlParser;
+import it.design.pattern.chain.ChainOfResponsabilityFactory;
+import it.design.pattern.chain.JuridicalPrinter;
+import it.design.pattern.chain.PhysicalPrinter;
 
 @Configuration
-@ComponentScan("it.design.pattern.factory")
-public class AppConfigFactory {
+@ComponentScan("it.design.pattern.chain")
+public class AppConfigFactoryChain {
 	@Bean
 	public FactoryBean<?> serviceLocatorFactoryBean() {
 		ServiceLocatorFactoryBean factoryBean = new ServiceLocatorFactoryBean();
-		factoryBean.setServiceLocatorInterface(ParserFactory.class);
+		factoryBean.setServiceLocatorInterface(ChainOfResponsabilityFactory.class);
 		return factoryBean;
 	}
 
-	@Bean(name = "jsonParser")
+	@Bean(name = "physicalPrinter")
 	@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-	public JsonParser jsonParser() {
-		return new JsonParser();
+	public PhysicalPrinter physicalPrinter() {
+		return new PhysicalPrinter();
 	}
 
-	@Bean(name = "xmlParser")
+	@Bean(name = "juridicalPrinter")
 	@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-	public XmlParser xmlParser() {
-		return new XmlParser();
+	public JuridicalPrinter juridicalPrinter() {
+		return new JuridicalPrinter();
 	}
+
 }
