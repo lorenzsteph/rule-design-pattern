@@ -15,7 +15,7 @@ public class ChainOfResponsibilityApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		log.info("********** TODO");
+		log.info("********** TODO ");
 	}
 
 	public static void main(String[] args) throws Exception {

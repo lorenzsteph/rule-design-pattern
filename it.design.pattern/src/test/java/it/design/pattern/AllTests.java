@@ -6,5 +6,4 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({ ChainOfResponsibilityTests.class, ServiceLocatorTests.class, ServiceLocatorAndChainTests.class })
 public class AllTests {
-	// do nothing
 }
