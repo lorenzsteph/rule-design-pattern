@@ -29,7 +29,7 @@ public class ServiceLocatorAndChainTests {
 		Customer customer = initCustomer(TypeCustomer.JURIDICAL);
 
 		chainOfResponsabilityService.printInfo(customer);
-		Assert.assertTrue(systemOutRule.getLog().contains("JuridicalInfo : ---> Business Name Value---> Vat Number Value"));
+		Assert.assertTrue(systemOutRule.getLog().contains("CustomerInfo : ---> Business Name Value---> Vat Number Value"));
 	}
 
 	@Test
@@ -37,7 +37,7 @@ public class ServiceLocatorAndChainTests {
 		Customer customer = initCustomer(TypeCustomer.PHYSICAL);
 
 		chainOfResponsabilityService.printInfo(customer);
-		Assert.assertTrue(systemOutRule.getLog().contains("PhysicalInfo : ---> Name Value---> Surname Value---> FiscalCode Value"));
+		Assert.assertTrue(systemOutRule.getLog().contains("CustomerInfo : ---> Name Value---> Surname Value---> FiscalCode Value"));
 	}
 
 	private Customer initCustomer(TypeCustomer typeCustomer) {

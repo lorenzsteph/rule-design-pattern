@@ -41,7 +41,6 @@ public class PrinterService {
 		for (RuleJuridical ruleJuridical : ruleJuridicalList) {
 			customerInfo += ruleJuridical.executeRule(customer);
 		}
-
 		log.info(customerInfo);
 	}
 

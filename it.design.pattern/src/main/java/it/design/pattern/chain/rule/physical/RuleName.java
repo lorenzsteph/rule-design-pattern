@@ -5,13 +5,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
-import it.design.pattern.chain.rule.RulePattern;
 import it.design.pattern.chain.rule.RulePhysical;
 import it.design.pattern.chain.rule.model.Customer;
 
 @Service
 @Order(1)
-public class RuleName implements RulePhysical,RulePattern {
+public class RuleName implements RulePhysical {
 
 	private static final Logger log = LoggerFactory.getLogger(RuleName.class);
 

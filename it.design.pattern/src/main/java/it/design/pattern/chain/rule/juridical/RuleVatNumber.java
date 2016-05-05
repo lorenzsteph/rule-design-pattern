@@ -6,12 +6,11 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 import it.design.pattern.chain.rule.RuleJuridical;
-import it.design.pattern.chain.rule.RulePattern;
 import it.design.pattern.chain.rule.model.Customer;
 
 @Service
 @Order(2)
-public class RuleVatNumber implements RuleJuridical, RulePattern {
+public class RuleVatNumber implements RuleJuridical {
 
 	private static final Logger log = LoggerFactory.getLogger(RuleVatNumber.class);
 
